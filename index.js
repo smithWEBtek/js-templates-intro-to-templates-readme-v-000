@@ -5,8 +5,10 @@
 
 function addComment(){
   event.preventDefault()
-  let bodyText = document.getElementById('commentText').value
-  let commenter = document.getElementById('commenterName').value
+  // let bodyText = document.getElementById('commentText').value
+  // let commenter = document.getElementById('commenterName').value
+  let bodyText = event.srcElement.commentText.value 
+  let commenter = event.srcElement.commenterName.value 
   let commentBody = createCommentBody(bodyText)
   let commenterLabel = createCommenterLabel(commenter)
   postNewComment(commentBody, commenterLabel)
